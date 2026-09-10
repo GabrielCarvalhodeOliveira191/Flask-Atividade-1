@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 1</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <h1>Calculadora de Idade</h1>
+    <form action="/calcular_idade" method="post">
+        <div class="pergunta">
+        <h2>Informe o Ano de Nascimento</h2>
+        </div>
+        <input class="campo1" type="text" name="ano_nascimento" required>
+        <button type="submit">Calcular Idade</button>
+
+    </form>
+
+    <div class="resultado">
+
+        {% if idade %}
+        A sua idade é: <b>{{ idade }}</b>
+        {% endif %}
+
+    </div>
+</body>
+</html>
